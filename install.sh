@@ -14,15 +14,18 @@ mkdir -p "$KB_PATH"/outputs "$KB_PATH"/.kb
 [ -f "$KB_PATH/wiki/index.md" ] || printf '# 위키 목차\n\n03 단계에서 채워집니다.\n\n## Concepts\n\n## Sources\n' > "$KB_PATH/wiki/index.md"
 [ -d "$KB_PATH/.git" ] || git -C "$KB_PATH" init -q
 
-mkdir -p "$HOME/.claude/skills/iny-material"
-cp "$SRC/SKILL.md" "$HOME/.claude/skills/iny-material/SKILL.md"
+DEST="$HOME/.claude/skills/iny-material"
+mkdir -p "$DEST"
+cp "$SRC/SKILL.md" "$DEST/SKILL.md"
+rm -rf "$DEST/scripts"
+cp -R "$SRC/scripts" "$DEST/scripts"      # 한글·pptx·xlsx 폴백. 없으면 hwp 를 못 뽑습니다
 
 mkdir -p "$HOME/.claude"
-cat > "$HOME/.claude/iny-config.json" <<EOF
+cat > "$HOME/.claude/iny-config.json" <<CFG
 {
   "kb_path": "$KB_PATH"
 }
-EOF
+CFG
 
 echo
 echo "설치됐습니다."
