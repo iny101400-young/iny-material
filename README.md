@@ -147,7 +147,7 @@ HWP 3.x 이하와 암호가 걸린 문서는 못 엽니다. 조용히 넘기지 
 
 ```
 01 material  →  02 identify  →  03 structure  →  04 design
-→  05 tech  →  06 build  →  07 admin  →  08 measure  ⟳
+→  05 build  →  06 admin  →  07 tech  →  08 measure  ⟳
 ```
 
 ---
