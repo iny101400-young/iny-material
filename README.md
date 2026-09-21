@@ -109,18 +109,18 @@ source: 원본 URL 또는 파일 경로
 ingested_at: 2026-08-25T13:00:00Z
 type: web | pdf | image | note | doc
 status: uncompiled
-owner: self | others | unknown
+owner: self | quoted | others | unknown
 ---
 ```
 
 | | |
 |---|---|
 | `status: uncompiled` | **아직 안 쓴 재료**라는 표시입니다. 다음 단계가 이걸 보고 새로 들어온 것만 처리합니다. 자료가 늘어나도 처음부터 다시 돌리지 않습니다 |
-| `owner` | 내 것인지입니다. 판단이 안 서면 `unknown` 으로 두고 다음 단계가 다시 묻습니다 |
+| `owner` | 내 것인지입니다. `quoted` 는 **남의 것이지만 출처를 밝히고 쓸 것**입니다. 판단이 안 서면 `unknown` 으로 두고 다음 단계가 다시 묻습니다 |
 
 해당할 때만 붙는 줄이 더 있습니다.
-`sensitive` (개인정보 **종류만**) · `layout_lost` (표 모양이 사라졌음) ·
-`described: no` (이미지를 아직 글로 안 옮겼음) · `extracted_by`.
+`made_by` (`quoted` 일 때 **만든 이**) · `sensitive` (개인정보 **종류만**) ·
+`layout_lost` (표 모양이 사라졌음) · `described: no` (이미지를 아직 글로 안 옮겼음) · `extracted_by`.
 
 ### 제외목록.md
 
